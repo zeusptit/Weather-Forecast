@@ -8,14 +8,14 @@ import requests
 import pytz
 from PIL import Image, ImageTk
 
-from button import RoundedButton
+from button import RoundedButton ## import module
 
 
-root = Tk()
+root = Tk() ## Cửa sổ root
 root.title("Weather App")
-root.geometry("830x615+360+120")
-root.configure(bg="#D8D6D6", border=1)
-root.resizable(False, False)
+root.geometry("830x615+360+120") ## Size của root
+root.configure(bg="#D8D6D6", border=1) ## Chỉnh màu nền và hình dạng của root
+root.resizable(False, False) ## không cho chỉnh size của cửa sổ N
 
 def onEnter():
     todayWeather()
@@ -24,7 +24,7 @@ def onEsc():
     root.destroy()
 
 def todayWeather():
-    city = textField.get().lower().title()
+    city = textField.get().lower().title() ## ha noi -> Ha Noi
     geolocator = Nominatim(user_agent = "weather")
     location = geolocator.geocode(city, timeout = 5)
     obj = TimezoneFinder()
@@ -171,7 +171,7 @@ def anotherDayWeather():
 
 ## Top box
 top_box = Frame(root, width=830, height=180, bg="#77baf3")
-top_box.pack(side=TOP)
+top_box.pack(side=TOP) 
 
 # Search box
 Search_image = PhotoImage(file="assets/images/Rounded Rectangle 3.png")
