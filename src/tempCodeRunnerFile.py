@@ -1,2 +1,1 @@
-label2 = Label(tab2, text='This is Tab 2')
-# label2.pack()
+nextDay_Image = nextDay_Image.subsample(10, 10)
