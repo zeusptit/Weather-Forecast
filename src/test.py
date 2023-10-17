@@ -10,11 +10,10 @@ import pytz
 from PIL import Image, ImageTk
 
 from button import RoundedButton
-<<<<<<< HEAD
+
 from countries import countries
 from city_search import find_country
-=======
->>>>>>> 908fcd7c88acb7ea4dee6e26da423bec5ee0c476
+
 
 root = Tk()
 root.title("Weather App")
@@ -181,7 +180,7 @@ def todayWeather():
     seventhLine.config(text="UV Index")
     seventhLine_temp.config(text=f"{round(json_data['daily'][0]['uvi'])} of 11")
 
-<<<<<<< HEAD
+
 
     ##Tab 2
     # First box
@@ -189,13 +188,36 @@ def todayWeather():
     firstline_box2.config(text=f" {city}, {find_country(city, countries)}")
 
 
+    # Second box
+
+    secondline_box2.config(text=f"{round(json_data['daily'][0]['temp']['day'])}° / {round(json_data['daily'][0]['temp']['night'])}°")
+    secondlinePhoto_1 =  json_data['daily'][0]['weather'][0]['icon']
+    icon_photo1 = PhotoImage(file=f"assets/main/icon/iconWeather/{secondlinePhoto_1}@2x.png")
+    ##icon_photo1 = icon_photo1.subsample(2, 2)
+    secondImage_icon.config(image=icon_photo1)
+    secondImage_icon.image = icon_photo1
+
+    secondImage_des.config(text=json_data['daily'][0]['weather'][0]['description'].title())
+    
+    secondlinePhoto_2 = PhotoImage(file = f"assets/main/icon/iconFeelLike/iconhumidity.png")
+    secondlinePhoto_2 = secondlinePhoto_2.subsample(20, 20)
+    secondImage_hmdIcon.config(image=secondlinePhoto_2)
+    secondImage_hmdIcon.image = secondlinePhoto_2
+    secondImage_hmdNum.config(text=f"{round(json_data['daily'][0]['humidity'])}%")
+
+    ## Time
+
+    first = datetime.now()
+    secondline_box1.config(text=first.strftime("%a %d"))
+
+
 
 def switch_tab(tab_index):
     notebook.select(tab_index)
-=======
+
 def anotherDayWeather():
     print("Hi")
->>>>>>> 908fcd7c88acb7ea4dee6e26da423bec5ee0c476
+
 
 
 top_box = Frame(tab1, width=830, height=140, bg="#77baf3")
@@ -246,18 +268,13 @@ box_3.place(x = 50, y = 370)
 box_4 = RoundedButton(tab1, 240, 340, 20, 2, 'white', '#D8D6D6')
 box_4.place(x = 540, y = 155)
 
-<<<<<<< HEAD
-# box_5 = RoundedButton(tab1, 240, 60, 20, 2, '#77baf3', '#D8D6D6', command=lambda: switch_tab(1))
-# box_5.place(x = 540, y = 510)
+
 
 box5_image = PhotoImage(file="assets/images/test1.png")
 box5_image = box5_image.subsample(2, 2)
 box_5 = Button(tab1, image=box5_image, borderwidth=0, cursor="hand2", bg="#D8D6D6", command=lambda: switch_tab(1), activebackground="#D8D6D6")
 box_5.place(x = 560, y = 510)
-=======
-box_5 = RoundedButton(tab1, 240, 60, 20, 2, '#77baf3', '#D8D6D6', command=anotherDayWeather)
-box_5.place(x = 540, y = 510)
->>>>>>> 908fcd7c88acb7ea4dee6e26da423bec5ee0c476
+
 
 ## First box
 
@@ -331,17 +348,12 @@ thirdFrame_3 = Frame(tab1, width=80, height=160, bg="white")
 thirdFrame_3.place(x = 293, y = 380)
 
 thirdFrame3_time = Label(thirdFrame_3, bg="white",  fg="black", font="arial 13 bold")
-<<<<<<< HEAD
+
 thirdFrame3_time.place(x = 5, y = 10)
 
 thirdFrame3_temp = Label(thirdFrame_3, bg="white", fg="black", font="arial 30 bold")
 thirdFrame3_temp.place(x = 15, y = 45)
-=======
-thirdFrame3_time.place(x = 1, y = 10)
 
-thirdFrame3_temp = Label(thirdFrame_3, bg="white", fg="black", font="arial 30 bold")
-thirdFrame3_temp.place(x = 20, y = 45)
->>>>>>> 908fcd7c88acb7ea4dee6e26da423bec5ee0c476
 
 thirdFrame3_icon = Label(thirdFrame_3, bg="white")
 thirdFrame3_icon.place(x = 15, y = 100)
@@ -375,11 +387,9 @@ fourthIntro = Label(fourthFrame, bg="white", fg="black", font="arial 12 bold")
 fourthIntro.place(x = 10, y = 5)
 
 fourthFrame_1 = Frame(tab1, width=220, height=40, bg="white")
-<<<<<<< HEAD
+
 fourthFrame_1.place(x = 550, y = 190)
-=======
-fourthFrame_1.place(x = 550, y = 230)
->>>>>>> 908fcd7c88acb7ea4dee6e26da423bec5ee0c476
+# fourthFrame_1.place(x = 550, y = 230)
 
 firstLine = Label(fourthFrame_1, bg="white", fg="black", font="arial 13 bold")
 firstLine.place(x = 5, y = 1)
@@ -502,7 +512,6 @@ canvas2_7.place(x = 550, y = 450)
 
 canvas2_7.create_line(10, 10, 220, 10, width=2, fill="#D8D6D6")
 
-<<<<<<< HEAD
 
 
 ## Tab 2
@@ -528,6 +537,28 @@ canvasTab2_1.place(x = 10, y = 50)
 canvasTab2_1.create_line(50, 10, 750, 10, width=2, fill="black")
 
 # Second line
+
+secondFrame_tab2 = Frame(tab2, width=830, height=60, bg="#D8D6D6")
+secondFrame_tab2.place(x = 10, y = 65)
+
+secondline_box1 = Label(secondFrame_tab2, bg="#D8D6D6", fg="black", font="arial 20 bold")
+secondline_box1.place(x = 45, y = 15)
+
+secondline_box2 = Label(secondFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+secondline_box2.place(x = 150, y = 18)
+
+secondImage_icon = Label(secondFrame_tab2, bg="#D8D6D6")
+secondImage_icon.place(x = 250, y = -20)
+
+secondImage_des = Label(secondFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+secondImage_des.place(x = 350, y = 15)
+
+secondImage_hmdIcon = Label(secondFrame_tab2, bg="#D8D6D6")
+secondImage_hmdIcon.place(x = 650, y = 15)
+
+secondImage_hmdNum = Label(secondFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+secondImage_hmdNum.place(x = 680, y = 15)
+
 canvasTab2_2 = Canvas(tab2, width=800, height=20, bg="#D8D6D6")
 canvasTab2_2.config(highlightbackground="#D8D6D6")
 canvasTab2_2.place(x = 10, y = 125)
@@ -626,9 +657,5 @@ canvasTab2_7.create_line(50, 10, 750, 10, width=2, fill="black")
 
 root.bind("<Escape>", lambda event=None: onEsc())
 root.bind("<Return>", lambda event=None: onEnter())
+
 root.mainloop()
-=======
-root.bind("<Escape>", lambda event=None: onEsc())
-root.bind("<Return>", lambda event=None: onEnter())
-root.mainloop()
->>>>>>> 908fcd7c88acb7ea4dee6e26da423bec5ee0c476
