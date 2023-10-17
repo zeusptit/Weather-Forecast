@@ -205,12 +205,123 @@ def todayWeather():
     secondImage_hmdIcon.image = secondlinePhoto_2
     secondImage_hmdNum.config(text=f"{round(json_data['daily'][0]['humidity'])}%")
 
+    # Third box
+    thirdline_box2.config(text=f"{round(json_data['daily'][1]['temp']['day'])}° / {round(json_data['daily'][1]['temp']['night'])}°")
+    thirdlinePhoto_1 =  json_data['daily'][1]['weather'][0]['icon']
+    icon_photo2 = PhotoImage(file=f"assets/main/icon/iconWeather/{thirdlinePhoto_1}@2x.png")
+    ##icon_photo2 = icon_photo2.subsample(2, 2)
+    thirdImage_icon.config(image=icon_photo2)
+    thirdImage_icon.image = icon_photo2
+
+    thirdImage_des.config(text=json_data['daily'][1]['weather'][0]['description'].title())
+    
+    thirdlinePhoto_2 = PhotoImage(file = f"assets/main/icon/iconFeelLike/iconhumidity.png")
+    thirdlinePhoto_2 = thirdlinePhoto_2.subsample(20, 20)
+    thirdImage_hmdIcon.config(image=thirdlinePhoto_2)
+    thirdImage_hmdIcon.image = thirdlinePhoto_2
+    thirdImage_hmdNum.config(text=f"{round(json_data['daily'][1]['humidity'])}%")
+
+    # Fourth box
+    fourthline_box2.config(text=f"{round(json_data['daily'][2]['temp']['day'])}° / {round(json_data['daily'][2]['temp']['night'])}°")
+    fourthlinePhoto_1 =  json_data['daily'][2]['weather'][0]['icon']
+    icon_photo3 = PhotoImage(file=f"assets/main/icon/iconWeather/{fourthlinePhoto_1}@2x.png")
+    ##icon_photo3 = icon_photo3.subsample(2, 2)
+    fourthImage_icon.config(image=icon_photo3)
+    fourthImage_icon.image = icon_photo3
+
+    fourthImage_des.config(text=json_data['daily'][2]['weather'][0]['description'].title())
+    
+    fourthlinePhoto_2 = PhotoImage(file = f"assets/main/icon/iconFeelLike/iconhumidity.png")
+    fourthlinePhoto_2 = fourthlinePhoto_2.subsample(20, 20)
+    fourthImage_hmdIcon.config(image=fourthlinePhoto_2)
+    fourthImage_hmdIcon.image = fourthlinePhoto_2
+    fourthImage_hmdNum.config(text=f"{round(json_data['daily'][2]['humidity'])}%")
+    
+    # Fifth box
+    fifthline_box2.config(text=f"{round(json_data['daily'][3]['temp']['day'])}° / {round(json_data['daily'][3]['temp']['night'])}°")
+    fifthlinePhoto_1 =  json_data['daily'][3]['weather'][0]['icon']
+    icon_photo4 = PhotoImage(file=f"assets/main/icon/iconWeather/{fifthlinePhoto_1}@2x.png")
+    ##icon_photo4 = icon_photo4.subsample(2, 2)
+    fifthImage_icon.config(image=icon_photo4)
+    fifthImage_icon.image = icon_photo4
+
+    fifthImage_des.config(text=json_data['daily'][3]['weather'][0]['description'].title())
+    
+    fifthlinePhoto_2 = PhotoImage(file = f"assets/main/icon/iconFeelLike/iconhumidity.png")
+    fifthlinePhoto_2 = fifthlinePhoto_2.subsample(20, 20)
+    fifthImage_hmdIcon.config(image=fifthlinePhoto_2)
+    fifthImage_hmdIcon.image = fifthlinePhoto_2
+    fifthImage_hmdNum.config(text=f"{round(json_data['daily'][3]['humidity'])}%")
+
+    # Sixth box
+    sixthline_box2.config(text=f"{round(json_data['daily'][4]['temp']['day'])}° / {round(json_data['daily'][4]['temp']['night'])}°")
+    sixthlinePhoto_1 =  json_data['daily'][4]['weather'][0]['icon']
+    icon_photo5 = PhotoImage(file=f"assets/main/icon/iconWeather/{sixthlinePhoto_1}@2x.png")
+    ##icon_photo5 = icon_photo5.subsample(2, 2)
+    sixthImage_icon.config(image=icon_photo5)
+    sixthImage_icon.image = icon_photo5
+
+    sixthImage_des.config(text=json_data['daily'][4]['weather'][0]['description'].title())
+    
+    sixthlinePhoto_2 = PhotoImage(file = f"assets/main/icon/iconFeelLike/iconhumidity.png")
+    sixthlinePhoto_2 = sixthlinePhoto_2.subsample(20, 20)
+    sixthImage_hmdIcon.config(image=sixthlinePhoto_2)
+    sixthImage_hmdIcon.image = sixthlinePhoto_2
+    sixthImage_hmdNum.config(text=f"{round(json_data['daily'][4]['humidity'])}%")
+
+    # Seventh box
+    seventhline_box2.config(text=f"{round(json_data['daily'][5]['temp']['day'])}° / {round(json_data['daily'][5]['temp']['night'])}°")
+    seventhlinePhoto_1 =  json_data['daily'][5]['weather'][0]['icon']
+    icon_photo6 = PhotoImage(file=f"assets/main/icon/iconWeather/{seventhlinePhoto_1}@2x.png")
+    ##icon_photo6 = icon_photo6.subsample(2, 2)
+    seventhImage_icon.config(image=icon_photo6)
+    seventhImage_icon.image = icon_photo6
+
+    seventhImage_des.config(text=json_data['daily'][5]['weather'][0]['description'].title())
+    
+    seventhlinePhoto_2 = PhotoImage(file = f"assets/main/icon/iconFeelLike/iconhumidity.png")
+    seventhlinePhoto_2 = seventhlinePhoto_2.subsample(20, 20)
+    seventhImage_hmdIcon.config(image=seventhlinePhoto_2)
+    seventhImage_hmdIcon.image = seventhlinePhoto_2
+    seventhImage_hmdNum.config(text=f"{round(json_data['daily'][5]['humidity'])}%")
+
+    # Eighth box
+    eighthline_box2.config(text=f"{round(json_data['daily'][6]['temp']['day'])}° / {round(json_data['daily'][6]['temp']['night'])}°")
+    eighthlinePhoto_1 =  json_data['daily'][6]['weather'][0]['icon']
+    icon_photo7 = PhotoImage(file=f"assets/main/icon/iconWeather/{eighthlinePhoto_1}@2x.png")
+    ##icon_photo7 = icon_photo7.subsample(2, 2)
+    eighthImage_icon.config(image=icon_photo7)
+    eighthImage_icon.image = icon_photo7
+
+    eighthImage_des.config(text=json_data['daily'][6]['weather'][0]['description'].title())
+    
+    eighthlinePhoto_2 = PhotoImage(file = f"assets/main/icon/iconFeelLike/iconhumidity.png")
+    eighthlinePhoto_2 = eighthlinePhoto_2.subsample(20, 20)
+    eighthImage_hmdIcon.config(image=eighthlinePhoto_2)
+    eighthImage_hmdIcon.image = eighthlinePhoto_2
+    eighthImage_hmdNum.config(text=f"{round(json_data['daily'][6]['humidity'])}%")
     ## Time
 
     first = datetime.now()
     secondline_box1.config(text=first.strftime("%a %d"))
 
+    second = first + timedelta(days = 1)
+    thirdline_box1.config(text = second.strftime("%a %d"))
 
+    third = second + timedelta(days = 1)
+    fourthline_box1.config(text = third.strftime("%a %d"))
+
+    fourth = third + timedelta(days = 1)
+    fifthline_box1.config(text = fourth.strftime("%a %d"))
+
+    fifth = fourth + timedelta(days = 1)
+    sixthline_box1.config(text = fifth.strftime("%a %d"))
+
+    sixth = fifth + timedelta(days = 1)
+    seventhline_box1.config(text = sixth.strftime("%a %d"))
+
+    seventh = sixth + timedelta(days = 1)
+    eighthline_box1.config(text = seventh.strftime("%a %d"))
 
 def switch_tab(tab_index):
     notebook.select(tab_index)
@@ -565,7 +676,30 @@ canvasTab2_2.place(x = 10, y = 125)
 
 canvasTab2_2.create_line(50, 10, 750, 10, width=2, fill="black")
 
+
 # Third line
+
+thirdFrame_tab2 = Frame(tab2, width=830, height=60, bg="#D8D6D6")
+thirdFrame_tab2.place(x = 10, y = 140)
+
+thirdline_box1 = Label(thirdFrame_tab2, bg="#D8D6D6", fg="black", font="arial 20 bold")
+thirdline_box1.place(x = 45, y = 15)
+
+thirdline_box2 = Label(thirdFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+thirdline_box2.place(x = 150, y = 18)
+
+thirdImage_icon = Label(thirdFrame_tab2, bg="#D8D6D6")
+thirdImage_icon.place(x = 250, y = -20)
+
+thirdImage_des = Label(thirdFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+thirdImage_des.place(x = 350, y = 15)
+
+thirdImage_hmdIcon = Label(thirdFrame_tab2, bg="#D8D6D6")
+thirdImage_hmdIcon.place(x = 650, y = 15)
+
+thirdImage_hmdNum = Label(thirdFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+thirdImage_hmdNum.place(x = 680, y = 15)
+
 canvasTab2_3 = Canvas(tab2, width=800, height=20, bg="#D8D6D6")
 canvasTab2_3.config(highlightbackground="#D8D6D6")
 canvasTab2_3.place(x = 10, y = 200)
@@ -573,13 +707,54 @@ canvasTab2_3.place(x = 10, y = 200)
 canvasTab2_3.create_line(50, 10, 750, 10, width=2, fill="black")
 
 # Fourth line
+fourthFrame_tab2 = Frame(tab2, width=830, height=60, bg="#D8D6D6")
+fourthFrame_tab2.place(x = 10, y = 215)
+
+fourthline_box1 = Label(fourthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 20 bold")
+fourthline_box1.place(x = 45, y = 15)
+
+fourthline_box2 = Label(fourthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+fourthline_box2.place(x = 150, y = 18)
+
+fourthImage_icon = Label(fourthFrame_tab2, bg="#D8D6D6")
+fourthImage_icon.place(x = 250, y = -20)
+
+fourthImage_des = Label(fourthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+fourthImage_des.place(x = 350, y = 15)
+
+fourthImage_hmdIcon = Label(fourthFrame_tab2, bg="#D8D6D6")
+fourthImage_hmdIcon.place(x = 650, y = 15)
+
+fourthImage_hmdNum = Label(fourthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+fourthImage_hmdNum.place(x = 680, y = 15)
 
 canvasTab2_4 = Canvas(tab2, width=800, height=20, bg="#D8D6D6")
 canvasTab2_4.config(highlightbackground="#D8D6D6")
 canvasTab2_4.place(x = 10, y = 275)
 
 canvasTab2_4.create_line(50, 10, 750, 10, width=2, fill="black")
+
 # Fifth line
+fifthFrame_tab2 = Frame(tab2, width=830, height=60, bg="#D8D6D6")
+fifthFrame_tab2.place(x = 10, y = 290)
+
+fifthline_box1 = Label(fifthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 20 bold")
+fifthline_box1.place(x = 45, y = 15)
+
+fifthline_box2 = Label(fifthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+fifthline_box2.place(x = 150, y = 18)
+
+fifthImage_icon = Label(fifthFrame_tab2, bg="#D8D6D6")
+fifthImage_icon.place(x = 250, y = -20)
+
+fifthImage_des = Label(fifthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+fifthImage_des.place(x = 350, y = 15)
+
+fifthImage_hmdIcon = Label(fifthFrame_tab2, bg="#D8D6D6")
+fifthImage_hmdIcon.place(x = 650, y = 15)
+
+fifthImage_hmdNum = Label(fifthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+fifthImage_hmdNum.place(x = 680, y = 15)
 
 canvasTab2_5 = Canvas(tab2, width=800, height=20, bg="#D8D6D6")
 canvasTab2_5.config(highlightbackground="#D8D6D6")
@@ -587,6 +762,26 @@ canvasTab2_5.place(x = 10, y = 350)
 
 canvasTab2_5.create_line(50, 10, 750, 10, width=2, fill="black")
 # Sixth line
+sixthFrame_tab2 = Frame(tab2, width=830, height=60, bg="#D8D6D6")
+sixthFrame_tab2.place(x = 10, y = 365)
+
+sixthline_box1 = Label(sixthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 20 bold")
+sixthline_box1.place(x = 45, y = 15)
+
+sixthline_box2 = Label(sixthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+sixthline_box2.place(x = 150, y = 18)
+
+sixthImage_icon = Label(sixthFrame_tab2, bg="#D8D6D6")
+sixthImage_icon.place(x = 250, y = -20)
+
+sixthImage_des = Label(sixthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+sixthImage_des.place(x = 350, y = 15)
+
+sixthImage_hmdIcon = Label(sixthFrame_tab2, bg="#D8D6D6")
+sixthImage_hmdIcon.place(x = 650, y = 15)
+
+sixthImage_hmdNum = Label(sixthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+sixthImage_hmdNum.place(x = 680, y = 15)
 
 canvasTab2_6 = Canvas(tab2, width=800, height=20, bg="#D8D6D6")
 canvasTab2_6.config(highlightbackground="#D8D6D6")
@@ -595,6 +790,26 @@ canvasTab2_6.place(x = 10, y = 425)
 canvasTab2_6.create_line(50, 10, 750, 10, width=2, fill="black")
 
 # Seventh line
+seventhFrame_tab2 = Frame(tab2, width=830, height=60, bg="#D8D6D6")
+seventhFrame_tab2.place(x = 10, y = 440)
+
+seventhline_box1 = Label(seventhFrame_tab2, bg="#D8D6D6", fg="black", font="arial 20 bold")
+seventhline_box1.place(x = 45, y = 15)
+
+seventhline_box2 = Label(seventhFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+seventhline_box2.place(x = 150, y = 18)
+
+seventhImage_icon = Label(seventhFrame_tab2, bg="#D8D6D6")
+seventhImage_icon.place(x = 250, y = -20)
+
+seventhImage_des = Label(seventhFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+seventhImage_des.place(x = 350, y = 15)
+
+seventhImage_hmdIcon = Label(seventhFrame_tab2, bg="#D8D6D6")
+seventhImage_hmdIcon.place(x = 650, y = 15)
+
+seventhImage_hmdNum = Label(seventhFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+seventhImage_hmdNum.place(x = 680, y = 15)
 
 canvasTab2_7 = Canvas(tab2, width=800, height=20, bg="#D8D6D6")
 canvasTab2_7.config(highlightbackground="#D8D6D6")
@@ -603,7 +818,26 @@ canvasTab2_7.place(x = 10, y = 500)
 canvasTab2_7.create_line(50, 10, 750, 10, width=2, fill="black")
 #Eighth line
 
+eighthFrame_tab2 = Frame(tab2, width=830, height=60, bg="#D8D6D6")
+eighthFrame_tab2.place(x = 10, y = 515)
 
+eighthline_box1 = Label(eighthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 20 bold")
+eighthline_box1.place(x = 45, y = 15)
+
+eighthline_box2 = Label(eighthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+eighthline_box2.place(x = 150, y = 18)
+
+eighthImage_icon = Label(eighthFrame_tab2, bg="#D8D6D6")
+eighthImage_icon.place(x = 250, y = -20)
+
+eighthImage_des = Label(eighthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+eighthImage_des.place(x = 350, y = 15)
+
+eighthImage_hmdIcon = Label(eighthFrame_tab2, bg="#D8D6D6")
+eighthImage_hmdIcon.place(x = 650, y = 15)
+
+eighthImage_hmdNum = Label(eighthFrame_tab2, bg="#D8D6D6", fg="black", font="arial 17 bold")
+eighthImage_hmdNum.place(x = 680, y = 15)
 
 
 
