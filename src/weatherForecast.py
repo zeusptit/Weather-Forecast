@@ -354,7 +354,7 @@ myImage_icon.place(x = 690, y = 30)
 
 ## Time zone
 timeZone = Label(tab1, font=("Arial", 20, 'bold'), fg="black", bg="#77baf3")
-timeZone.place(x = 50, y = 20)
+timeZone.place(x = 30, y = 20)
 
 longLat = Label(tab1, font=("Arial", 10), fg="black", bg="#77baf3")
 longLat.place(x = 50, y = 60)
@@ -396,7 +396,7 @@ firstImage = Label(firstFrame, bg="white")
 firstImage.place(x = 1, y = 1)
 
 firstDes = Label(firstFrame, bg="white", fg="black", font="arial 15 bold")
-firstDes.place(x = 15, y = 80)
+firstDes.place(x = 5, y = 80)
 
 day1TempAve = Label(firstFrame, bg="white", fg="black", font="arial 50 bold")
 day1TempAve.place(x = 250, y = 1)
