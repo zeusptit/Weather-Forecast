@@ -14,3 +14,4 @@
   - Type the correct city name according to international standard
   - Press Enter or click search button in Search Box
   - Click button *Next day >>* and *<-* to switch two pages
+  - Can press Esc to turn off the application instead of X
