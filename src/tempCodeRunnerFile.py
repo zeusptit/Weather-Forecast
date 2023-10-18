@@ -1,1 +1,0 @@
-fourthFrame_1.place(x = 550, y = 230)
